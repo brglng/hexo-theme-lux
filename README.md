@@ -1,0 +1,133 @@
+# Lux
+
+A minimalism theme for [Hexo] forked from [Light](https://github.com/hexojs/hexo-theme-light)
+
+[Demo](http://sololand.moe)
+
+## Install
+
+Execute the following command and modify `theme` in `_config.yml` to `lux`.
+
+```
+git clone https://github.com/hexojs/hexo-theme-light.git themes/lux
+```
+
+## Update
+
+Execute the following command to update Lux.
+
+```
+cd themes/lux
+git pull
+```
+
+## Config
+
+Default config:
+
+``` yaml
+menu:
+  Home: /
+  Archives: /archives
+
+widgets:
+- search
+- tagcloud
+- links
+
+excerpt_link: Read More
+
+twitter:
+  username:
+  show_replies: false
+  tweet_count: 5
+
+addthis:
+  enable: false
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
+
+baidu_share:
+  enable: true
+
+fancybox: true
+
+rss:
+```
+
+- **menu** - Main navigation menu
+- **widget** - Widgets displaying in sidebar
+- **excerpt_link** - "Read More" link text at the bottom of excerpted articles
+- **twitter** - Twitter widget config
+  - **username** - Twitter username
+  - **show_replies** - Enable displaying replies
+  - **tweet_count** - Tweets display in widget
+- **addthis** - Share buttons at the bottom of articles (Powered by [AddThis])
+  - **enable** - Enable share buttons
+  - **pubid** - Profile ID of [AddThis]
+  - **facebook** - Enable Facebook button
+  - **twitter** - Enable Twitter button
+  - **google** - Enable Google+ button
+  - **pinterest** - Enable Pinterest button
+- **baidu_share** - Share buttons at the bottom of articles (Powered by Baidu Share)
+  - **enable** - Enable share buttons
+- **fancybox** - Enable [Fancybox]
+- **google_analytics** - Google Analytics ID
+- **baidu_analytics** - Baidu Analytics ID
+- **bing_webmaster_tools** - Bing Webmaster Tools ID
+- **rss** - RSS subscription link (change if using Feedburner)
+
+## Features
+
+### Disqus and Duoshuo Comments Simultaneously
+
+### Baidu Share Support
+
+### Googla Analytics, Baidu Statistics and Bing Webmaster Tools Support
+
+### _Links_ Widget
+
+### Google/Baidu Search Switcher
+
+### "Powered By" Information in Footer
+
+### Gallery Post
+
+![](http://i.minus.com/ibp6Hbytwgof9y.jpg)
+
+```
+---
+layout: photo
+title: Gallery Post
+photos:
+- http://i.minus.com/ibobbTlfxZgITW.jpg
+- http://i.minus.com/iedpg90Y0exFS.jpg
+---
+```
+
+### Link Post
+
+![](http://i.minus.com/i7hBbGqh14EWo.png)
+
+```
+---
+layout: link
+title: Link Post
+link: http://www.google.com/
+---
+```
+
+### Tweet Widget
+
+![](http://i.minus.com/iMC8EyF9y0Y3y.PNG)
+
+### Fancybox
+
+![](http://i.minus.com/iHv7h7rZNqHvo.PNG)
+
+[Hexo]: http://zespia.tw/hexo/
+[AddThis]: https://www.addthis.com
+[Fancybox]: http://fancyapps.com/fancybox/

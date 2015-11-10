@@ -1,0 +1,66 @@
+<% if (index) { %>
+<article class="<%= item.layout %> article_index">
+<% } else { %>
+<article class="<%= item.layout %>">
+<% } %>
+  <% if (item.photos && item.photos.length){ %>
+    <%- partial('post/gallery') %>
+  <% } %>
+  <div class="post-content">
+    <header>
+      <% if (item.layout != 'page'){ %>
+        <!-- <div class="icon"></div> -->
+        <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %>&nbsp;<%= item.date.format(config.time_format) %></a></time>
+      <% } %>
+      <%- partial('post/title') %>
+    </header>
+    <div class="entry">
+      <% if (item.excerpt && index){ %>
+        <%- item.excerpt %>
+      <% } else { %>
+        <%- item.content %>
+      <% } %>
+    </div>
+    <% if (index) { %>
+    <footer>
+    <% } else { %>
+    <footer class="border_top">
+    <% } %>
+      <% if (index){ %>
+        <% if (item.excerpt){ %>
+          <div class="alignleft">
+            <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
+          </div>
+        <% } %>
+        <% if (item.comments && (config.disqus_shortname || config.duoshuo_shortname)){ %>
+        <div class="alignright">
+          <% if (config.disqus_shortname && config.duoshuo_shortname) { %>
+            <a href="<%- item.permalink %>#provider_switcher" class="comment-link"><%= __('comment') %></a>
+          <% } else if (config.disqus_shortname) { %>
+            <a href="<%- item.permalink %>#disqus_thread" class="comment-link"><%= __('comment') %></a>
+          <% } else { %>
+            <a href="<%- item.permalink %>#ds-thread" class="comment-link"><%= __('comment') %></a>
+          <% } %>
+        </div>
+        <% } %>
+      <% } else { %>
+        <%- partial('post/category') %>
+        <%- partial('post/tag') %>
+        <%- partial('post/share') %>
+      <% } %>
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<nav id="pagination" >
+  <% if (page.prev) { %>
+    <a href="<%- config.root %><%- page.prev.path %>" class="alignleft prev" ><%= __('prev_post') %>: <%= page.prev.title %></a>
+  <% } %>
+  <% if (page.next) { %>
+    <a href="<%- config.root %><%- page.next.path %>" class="alignright next" ><%= __('next_post') %>: <%= page.next.title %></a>
+  <% } %>
+  <div class="clearfix"></div>
+</nav>
+
+<%- partial('comment') %>

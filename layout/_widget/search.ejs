@@ -1,0 +1,39 @@
+<div class="search">
+  <div id="google_search">
+    <form action="//google.com/search" method="get" accept-charset="utf-8">
+      <input type="search" name="q" results="0" placeholder="<%= __('search') %>">
+      <input type="hidden" name="domains" value="<%- config.url.replace(/^https?:\/\//, '') %>">
+      <input type="hidden" name="sitesearch" value="<%- config.url.replace(/^https?:\/\//, '') %>">
+    </form>
+  </div>
+  <div id="baidu_search" style="display: none">
+    <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8">
+      <input type="search" name="wd" placeholder="<%= __('search') %>">
+      <input name="tn" type="hidden" value="bds">
+      <input name="cl" type="hidden" value="3">
+      <input name="ct" type="hidden" value="2097152">
+      <input name="si" type="hidden" value="<%- config.url.replace(/^https?:\/\//, '') %>">
+    </form>
+  </div>
+  <div id="search_selector">
+    <form>
+      <input id="google_radio" name="provider" type="radio" value="google" checked>
+      <label for="google_radio"><%= __('google') %></label>
+      <input id="baidu_radio" name="provider" type="radio" value="baidu">
+      <label for="baidu_radio"><%= __('baidu') %></label>
+      <script type="text/javascript">
+        function googleRadioOnFocusListener() {
+          document.getElementById('google_search').style.display = 'block';
+          document.getElementById('baidu_search').style.display = 'none';
+        }
+        function baiduRadioOnFocusListener() {
+          document.getElementById('google_search').style.display = 'none';
+          document.getElementById('baidu_search').style.display = 'block';
+        }
+        document.getElementById('google_radio').addEventListener('focus', googleRadioOnFocusListener);
+        document.getElementById('baidu_radio').addEventListener('focus', baiduRadioOnFocusListener);
+      </script>
+    </form>
+  </div>
+</div>
+
