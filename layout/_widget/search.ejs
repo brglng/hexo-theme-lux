@@ -16,24 +16,26 @@
     </form>
   </div>
   <div id="search_selector">
-    <form>
-      <input id="google_radio" name="provider" type="radio" value="google" checked>
-      <label for="google_radio"><%= __('google') %></label>
-      <input id="baidu_radio" name="provider" type="radio" value="baidu">
-      <label for="baidu_radio"><%= __('baidu') %></label>
-      <script type="text/javascript">
-        function googleRadioOnFocusListener() {
-          document.getElementById('google_search').style.display = 'block';
-          document.getElementById('baidu_search').style.display = 'none';
-        }
-        function baiduRadioOnFocusListener() {
-          document.getElementById('google_search').style.display = 'none';
-          document.getElementById('baidu_search').style.display = 'block';
-        }
-        document.getElementById('google_radio').addEventListener('focus', googleRadioOnFocusListener);
-        document.getElementById('baidu_radio').addEventListener('focus', baiduRadioOnFocusListener);
-      </script>
-    </form>
+    <input id="google_radio" name="provider" type="radio" value="google" checked>
+    <label for="google_radio">
+      <span></span><%= __('google') %>
+    </label>
+    <input id="baidu_radio" name="provider" type="radio" value="baidu">
+    <label for="baidu_radio">
+      <span></span><%= __('baidu') %>
+    </label>
+    <script type="text/javascript">
+      function googleRadioOnFocusListener() {
+        document.getElementById('google_search').style.display = 'block';
+        document.getElementById('baidu_search').style.display = 'none';
+      }
+      function baiduRadioOnFocusListener() {
+        document.getElementById('google_search').style.display = 'none';
+        document.getElementById('baidu_search').style.display = 'block';
+      }
+      document.getElementById('google_radio').addEventListener('focus', googleRadioOnFocusListener);
+      document.getElementById('baidu_radio').addEventListener('focus', baiduRadioOnFocusListener);
+    </script>
   </div>
 </div>
 

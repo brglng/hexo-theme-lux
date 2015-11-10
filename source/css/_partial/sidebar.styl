@@ -51,13 +51,25 @@
   #search_selector
     text-align center
     font-size 0.9em
-    input
-      margin-top 10px
-      margin-left 10px
+    margin-top 0.5em
+    input[type="radio"]
+      display none
     label
-      margin-top 10px
-      margin-left 3px
-      margin-right 10px
+      margin-left 1em
+      margin-right 1em
+      vertical-align middle
+      cursor pointer
+    input[type="radio"] + label span
+      display inline-block
+      vertical-align middle
+      margin-right 0.5em
+      width 0.6em
+      height 0.6em
+      border 0.2em solid color-border
+      border-radius 50%
+      background-color color-border
+    input[type="radio"]:checked + label span
+      background-color color-meta
 
   .tag
     small
