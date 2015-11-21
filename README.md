@@ -9,7 +9,7 @@ A minimalism theme for [Hexo] forked from [Light](https://github.com/hexojs/hexo
 Execute the following command and modify `theme` in `_config.yml` to `lux`.
 
 ```
-git clone https://github.com/hexojs/hexo-theme-light.git themes/lux
+git clone https://github.com/brglng/hexo-theme-lux.git themes/lux
 ```
 
 ## Update
@@ -72,7 +72,8 @@ rss:
   - **twitter** - Enable Twitter button
   - **google** - Enable Google+ button
   - **pinterest** - Enable Pinterest button
-- **baidu_share** - Share buttons at the bottom of articles (Powered by Baidu Share)
+- **baidu_share** - Share buttons at the bottom of articles
+  (Powered by Baidu Share)
   - **enable** - Enable share buttons
 - **fancybox** - Enable [Fancybox]
 - **google_analytics** - Google Analytics ID
@@ -83,16 +84,47 @@ rss:
 ## Features
 
 ### Disqus and Duoshuo Comments Simultaneously
+If `disqus_shortname` and `duoshuo_shortname` are both set in your *site's*
+`_config.yml`, both comment provider will be used, and there will be a
+switcher above them. If only one of them is set, it will be used and there
+will be no switcher.
+```yaml
+disqus_shortname: <disqus shortname>
+duoshuo_shortname: <duoshuo shortname>
+```
 
 ### Baidu Share Support
+In *theme's* `_config.yml`:
+```yaml
+baidu_share:
+  enable: true
+```
 
-### Googla Analytics, Baidu Statistics and Bing Webmaster Tools Support
+### Googla Analytics and Baidu Statistics Support
+In *site's* `_config.yml`:
+```yaml
+google_analytics: <Google Analytics ID>
+baidu_statistics: <Baidu Statistics ID>
+```
 
 ### _Links_ Widget
+In *site's* `_config.yml`:
+```yaml
+links:
+  Hexo: https://hexo.io
+  Lux: https://github.com/brglng/hexo-theme-lux/
+```
 
 ### Google/Baidu Search Switcher
+In the search widget, Google/Baidu can be selected
 
 ### "Powered By" Information in Footer
+In *site's* `_config.yml`:
+```yaml
+powered_by:
+  Hexo: https://hexo.io/
+  Lux: https://github.com/brglng/hexo-theme-lux
+```
 
 ### Gallery Post
 
