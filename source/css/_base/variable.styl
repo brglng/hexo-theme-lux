@@ -1,5 +1,5 @@
 // Color
-color-background = #fcfcfc
+color-background = #fff
 color-font = #444
 color-meta = #999
 color-border = #ddd
@@ -7,15 +7,23 @@ color-border = #ddd
 color-link = color-font
 
 // Font
-font-default = "Helvetica Neue", "Helvetica", Arial, "DejaVu Sans", "Noto Sans CJK SC", "Noto Sans CJK TC", "Noto Sans CJK JP", "Noto Sans CJK KR", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", sans-serif
-font-serif = "Georgia", serif
-font-mono = "Ubuntu Mono", Consolas, Menlo, "DejaVu Sans Mono", "Courier New", "Lucida Console", "Noto Sans CJK SC", "Noto Sans CJK TC", "Noto Sans CJK JP", "Noto Sans CJK KR", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", monospace
-font-title = "Lato", Helvetica Neue, Helvetica, Arial, "DejaVu Sans", "Noto Sans CJK SC", "Noto Sans CJK TC", "Noto Sans CJK JP", "Noto Sans CJK KR", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", sans-serif
+font-default = "Helvetica Neue", "Helvetica", Arial, sans-serif
+font-serif = "Georgia", "STSong", "华文宋体", "SimSun", "宋体", "AR PL UMing CN", "AR PL UMing HK", serif
+font-mono = "Ubuntu Mono", Consolas, Menlo, "DejaVu Sans Mono", "Courier New", "Lucida Console", monospace, sans-serif
+font-title = "Lato", Helvetica Neue, Helvetica, Arial, sans-serif
+font-italic = "Emphasis", STKaiti, "AR PL UKai CN", "AR PL UKai HK", Kai, Kaiti, SimKai, "SimKai_GB2312", serif
 
 // @import url("//fonts.googleapis.com/css?family=Lato:400,400italic")
 
 font-icon = FontAwesome
 font-icon-path = 'font/fontawesome-webfont'
+
+@font-face {
+  font-family "Emphasis"
+  src local("Georgia Italic"), local("Georgia")
+  font-style italic
+  font-weight normal
+}
 
 @font-face {
   font-family 'FontAwesome'
