@@ -9,8 +9,8 @@
   <div class="post-content">
     <header>
       <% if (item.layout != 'page'){ %>
-        <!-- <div class="icon"></div> -->
-        <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %>&nbsp;<%= item.date.format(config.time_format) %></a></time>
+        <div class="icon"></div>
+        <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
       <% } %>
       <%- partial('post/title') %>
     </header>
@@ -32,15 +32,9 @@
             <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
           </div>
         <% } %>
-        <% if (item.comments && (config.disqus_shortname || config.duoshuo_shortname)){ %>
+        <% if (item.comment && config.disqus_shortname){ %>
         <div class="alignright">
-          <% if (config.disqus_shortname && config.duoshuo_shortname) { %>
-            <a href="<%- item.permalink %>#provider_switcher" class="comment-link"><%= __('comment') %></a>
-          <% } else if (config.disqus_shortname) { %>
-            <a href="<%- item.permalink %>#disqus_thread" class="comment-link"><%= __('comment') %></a>
-          <% } else { %>
-            <a href="<%- item.permalink %>#ds-thread" class="comment-link"><%= __('comment') %></a>
-          <% } %>
+          <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
         </div>
         <% } %>
       <% } else { %>

@@ -37,10 +37,6 @@
     <meta property="og:image" content="<%= config.cover %>"/>
   <% } %>
 
-  <% if (config.bing_webmaster_tools) { %>
-    <meta name="msvalidate.01" content="<%= theme.bing_webmaster_tools %>" />
-  <% } %>
-
   <link href="<%- config.root %>favicon.png" rel="icon">
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">

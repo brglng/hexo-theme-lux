@@ -1,67 +1,15 @@
-<% if (page.comments) { %>
-  <section id="comment">
-    <h1 class="title"><%= __('comment') %></h1>
+<% if (page.comments){ %>
+<section id="comment">
+  <h1 class="title"><%= __('comment') %></h1>
 
-    <% if (theme.comment_provider == "facebook") {
+  <% if (theme.comment_provider == "facebook") {
       if (theme.facebook) { %>
       <%- partial('_partial/facebook_comment', {fbConfig: theme.facebook}) %>
       <% } %>
-    <% } else { %>
-      <% if (config.disqus_shortname && config.duoshuo_shortname) { %>
-        <div id="provider_switcher" class="provider_switcher">
-          <div id="disqus_selector" class="provider_selected">Disqus</div>
-          <div id="duoshuo_selector" class="provider_unselected"><%= __('duoshuo') %></div>
-          <script type="text/javascript">
-            function disqusSelectorOnClick() {
-              document.getElementById('disqus_thread').style.display = 'block';
-              document.getElementById('ds-thread').style.display = 'none';
-              document.getElementById('disqus_selector').className = 'provider_selected';
-              document.getElementById('duoshuo_selector').className = 'provider_unselected';
-            }
-            function duoshuoSelectorOnClick() {
-              document.getElementById('disqus_thread').style.display = 'none';
-              document.getElementById('ds-thread').style.display = 'block';
-              document.getElementById('disqus_selector').className = 'provider_unselected';
-              document.getElementById('duoshuo_selector').className = 'provider_selected';
-            }
-            document.getElementById('disqus_selector').addEventListener('click', disqusSelectorOnClick);
-            document.getElementById('duoshuo_selector').addEventListener('click', duoshuoSelectorOnClick);
-          </script>
-        </div>
-      <% } %>
-      <% if (config.disqus_shortname) { %>
-        <div id="disqus_thread">
-          <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-      <% } %>
-      <% if (config.duoshuo_shortname) { %>
-
-        <!-- 多说评论框 start -->
-        <% if (config.disqus_shortname) { %>
-        <div class="ds-thread" style="display: none" data-thread-key="<%= page.path %>" data-title="<%= page.title %>" data-url="<%= page.permalink %>"></div>
-        <% } else { %>
-        <div class="ds-thread" data-thread-key="<%= page.path %>" data-title="<%= page.title %>" data-url="<%= page.permalink %>"></div>
-        <% } %>
-        <!-- 多说评论框 end -->
-        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-        <script type="text/javascript">
-        var duoshuoQuery = {short_name:"<%= config.duoshuo_shortname %>"};
-          (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0]
-            || document.getElementsByTagName('body')[0]).appendChild(ds);
-          })();
-        </script>
-        <!-- 多说公共JS代码 end -->
-      <% } %>
-      <% if (config.disqus_shortname && config.duoshuo_shortname) { %>
-        <!-- <script type="text/javascript">
-        duoshuo_thread.style.display="none";
-        </script> -->
-      <% } %>
-    <% } %>
- </section>
+  <% } else if(config.disqus_shortname) { %>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  <% } %>
+</section>
 <% } %>
