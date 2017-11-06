@@ -8,11 +8,11 @@
   <% } %>
   <div class="post-content">
     <header>
+      <%- partial('post/title') %>
       <% if (item.layout != 'page'){ %>
-        <div class="icon"></div>
+        <!-- <div class="icon"></div> -->
         <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
       <% } %>
-      <%- partial('post/title') %>
     </header>
     <div class="entry">
       <% if (item.excerpt && index){ %>

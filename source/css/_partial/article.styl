@@ -38,7 +38,7 @@ article
           vertical-align super
 
   .post-content
-    padding 20px 20px 15px (icon-size + icon-gap + 20)
+    padding 20px 20px 15px 0px
     margin-bottom 50px
     position relative
     @media screen and (max-width: 600px)
@@ -93,6 +93,8 @@ article
         right 10px
 
   header
+    text-align center
+
     .icon
       width icon-size
       height icon-size
@@ -120,6 +122,7 @@ article
 
     .title
       font-weight normal
+      text-align center
       a
         color color-font
         &:hover
@@ -131,6 +134,9 @@ article
     line-height 1.6
     p, blockquote, ul, ol, dl, table, iframe, h3, h4, h5, h6, .video-container
       margin-top 15px
+
+    a
+      text-decoration underline
 
     table
       border-collapse collapse
@@ -204,12 +210,14 @@ article
 
     h1, h2
       font-weight normal
-      border-bottom 1px solid color-border
+      text-align center
+      // border-bottom 1px solid color-border
       padding-bottom 10px
       margin-top 20px
 
     h3, h4, h5, h6
       font-weight normal
+      text-align center
 
     img, video
       max-width 100%
