@@ -31,12 +31,12 @@
       <% } %>
     <% } %>
     </div>
-    <% if (item.layout == 'post'){ %>
-      <% if (index) { %>
-      <footer>
-      <% } else { %>
-      <footer class="border-bottom">
-      <% } %>
+    <% if (index) { %>
+    <footer>
+    <% } else { %>
+    <footer class="border-bottom">
+    <% } %>
+      <% if (item.layout == 'post'){ %>
         <% if (index){ %>
           <% if (item.excerpt){ %>
             <div class="alignright">
@@ -50,8 +50,8 @@
           <div class="post-divider"></div>
         <% } %>
         <div class="clearfix"></div>
-      </footer>
     <% } %>
+    </footer>
   </div>
 </article>
 
