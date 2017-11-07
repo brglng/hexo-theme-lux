@@ -36,7 +36,7 @@
               <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= __('read_more') %></a>
             </div>
           <% } %>
-          <% if (item.comment && config.disqus_shortname){ %>
+          <% if (item.comments && config.disqus_shortname){ %>
             <div class="alignright">
               <a href="<%- item.permalink %>#disqus_thread" class="comment-link"><%= __('comment') %></a>
             </div>
@@ -60,6 +60,6 @@
   <div class="clearfix"></div>
 </nav>
 
-<% if (item.layout != 'page'){ %>
+<% if (item.comments && config.disqus_shortname){ %>
   <%- partial('comment') %>
 <% } %>

@@ -6,22 +6,24 @@
   <ul>
     <% for (var i in theme.menu){ %>
       <li>
-        <% if (i == 'home') { %>
-          <i>&#xf015</i>
-        <% } else if (i == 'archives') { %>
-          <i>&#xf073</i>
-        <% } else if (i == 'categories') { %>
-          <i>&#xf07b</i>
-        <% } else if (i == 'tags') { %>
-          <i>&#xf02b</i>
-        <% } else if (i == 'about') { %>
-          <i>&#xf007</i>
-        <% } else if (i == 'github') { %>
-          <i>&#xf09b</i>
-        <% } else if (i == 'feed') { %>
-          <i>&#xf09e</i>
-        <% } %>
-        <a href="<%- theme.menu[i] %>"><%= __(i) %></a>
+        <a href="<%- theme.menu[i] %>">
+          <% if (i == 'home') { %>
+            <i>&#xf015</i>
+          <% } else if (i == 'archives') { %>
+            <i>&#xf073</i>
+          <% } else if (i == 'categories') { %>
+            <i>&#xf07b</i>
+          <% } else if (i == 'tags') { %>
+            <i>&#xf02b</i>
+          <% } else if (i == 'about') { %>
+            <i>&#xf007</i>
+          <% } else if (i == 'github') { %>
+            <i>&#xf09b</i>
+          <% } else if (i == 'feed') { %>
+            <i>&#xf09e</i>
+          <% } %>
+          <%= __(i) %>
+        </a>
       </li>
     <% } %>
   </ul>
