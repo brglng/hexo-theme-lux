@@ -3,8 +3,8 @@ menu:
   archives: /archives/
   tags: /tags/
   about: /about/
-  github: https://github.com/brglng/
   feed: /atom.xml
+  github: https://github.com/brglng/
 
 twitter:
   username:

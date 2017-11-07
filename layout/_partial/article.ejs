@@ -13,6 +13,9 @@
         <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
         <%- partial('post/category') %>
         <%- partial('post/tag') %>
+        <% if (item.comments && config.disqus_shortname){ %>
+          <div class="comment-link"><a href="<%- item.permalink %>#disqus_thread"><%= __('comment') %></a></div>
+        <% } %>
       </header>
     <% } %>
     <% if (item.type == 'tagcloud') { %>
@@ -29,20 +32,22 @@
     <% } %>
     </div>
     <% if (item.layout == 'post'){ %>
+      <% if (index) { %>
       <footer>
+      <% } else { %>
+      <footer class="border-bottom">
+      <% } %>
         <% if (index){ %>
           <% if (item.excerpt){ %>
-            <div class="alignleft">
-              <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= __('read_more') %></a>
-            </div>
-          <% } %>
-          <% if (item.comments && config.disqus_shortname){ %>
             <div class="alignright">
-              <a href="<%- item.permalink %>#disqus_thread" class="comment-link"><%= __('comment') %></a>
+              <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= __('read_more') %></a>
             </div>
           <% } %>
         <% } else { %>
           <%- partial('post/share') %>
+        <% } %>
+        <% if (index) { %>
+          <div class="post-divider"></div>
         <% } %>
         <div class="clearfix"></div>
       </footer>

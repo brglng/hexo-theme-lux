@@ -30,13 +30,6 @@ menu:
   Home: /
   Archives: /archives
 
-widgets:
-- search
-- tagcloud
-- links
-
-excerpt_link: Read More
-
 twitter:
   username:
   show_replies: false
