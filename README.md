@@ -78,20 +78,9 @@ rss:
 - **fancybox** - Enable [Fancybox]
 - **google_analytics** - Google Analytics ID
 - **baidu_analytics** - Baidu Analytics ID
-- **bing_webmaster_tools** - Bing Webmaster Tools ID
 - **rss** - RSS subscription link (change if using Feedburner)
 
 ## Features
-
-### Disqus and Duoshuo Comments Simultaneously
-If `disqus_shortname` and `duoshuo_shortname` are both set in your *site's*
-`_config.yml`, both comment provider will be used, and there will be a
-switcher above them. If only one of them is set, it will be used and there
-will be no switcher.
-```yaml
-disqus_shortname: <disqus shortname>
-duoshuo_shortname: <duoshuo shortname>
-```
 
 ### Baidu Share Support
 In *theme's* `_config.yml`:

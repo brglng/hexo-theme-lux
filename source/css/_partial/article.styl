@@ -38,7 +38,7 @@ article
           vertical-align super
 
   .post-content
-    padding 20px 20px 15px 0px
+    padding 0
     margin-bottom 50px
     position relative
     @media screen and (max-width: 600px)
@@ -94,6 +94,7 @@ article
 
   header
     text-align center
+    margin-bottom 40px
 
     .icon
       width icon-size
@@ -114,11 +115,44 @@ article
         text-align center
 
     time
-      color color-meta
       font 0.9em font-title
-      margin-bottom 5px
-      display block
+      margin-top 5px
+      margin-left 7px
+      margin-right 7px
+      display inline
       line-height 1
+
+      a
+        color color-meta
+
+    .categories, .tags
+      color color-meta
+      font-size 0.9em
+      position relative
+      margin-top 5px
+      margin-left 7px
+      margin-right 7px
+      display inline
+      &:before
+        position relative
+        font 1.1em font-icon
+
+      a
+        color color-meta
+
+    .categories
+      &:before
+        content '\f07b'
+        top 2px
+        left 1px
+        margin-right 5px
+
+    .tags
+      &:before
+        content '\f02b'
+        top 3px
+        left 2px
+        margin-right 5px
 
     .title
       font-weight normal
@@ -265,17 +299,23 @@ article
       width 45%
       font-size 1.5em
 
-  .border_top
-    border-top 1px solid color-border
+  .tagcloud
+    text-align center
+
+    a
+      margin-left 15px
+      margin-right 15px
+      display inline-block
 
   footer
-    margin-top 15px
+    margin-top 20px
     padding-top 10px
     color color-meta
     font-size 0.9em
     line-height 16px
     position relative
     min-height 16px
+    text-align center
 
     a
       color color-meta
@@ -319,3 +359,9 @@ article
       margin-top 15px
       iframe
         margin-top 0
+
+    .bdshare
+      float left
+      position relative
+      left 50%
+      margin-left -160px

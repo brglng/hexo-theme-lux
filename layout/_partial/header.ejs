@@ -1,11 +1,28 @@
-<div class="aligncenter">
+<div>
   <h1><a href="<%- config.root %>"><%= config.title %></a></h1>
   <h2><a href="<%- config.root %>"><% if (config.subtitle){ %><%= config.subtitle %><% } %></a></h2>
 </div>
-<nav id="main-nav" class="aligncenter">
+<nav id="main-nav">
   <ul>
     <% for (var i in theme.menu){ %>
-      <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+      <li>
+        <% if (i == 'home') { %>
+          <i>&#xf015</i>
+        <% } else if (i == 'archives') { %>
+          <i>&#xf073</i>
+        <% } else if (i == 'categories') { %>
+          <i>&#xf07b</i>
+        <% } else if (i == 'tags') { %>
+          <i>&#xf02b</i>
+        <% } else if (i == 'about') { %>
+          <i>&#xf007</i>
+        <% } else if (i == 'github') { %>
+          <i>&#xf09b</i>
+        <% } else if (i == 'feed') { %>
+          <i>&#xf09e</i>
+        <% } %>
+        <a href="<%- theme.menu[i] %>"><%= __(i) %></a>
+      </li>
     <% } %>
   </ul>
   <div class="clearfix"></div>

@@ -1,4 +1,4 @@
-<div class="aligncenter">
+<div>
   <% if (config.author){ %>
     <p>
     &copy; <%= new Date().getFullYear() %> <%= config.author %>
@@ -9,7 +9,7 @@
   <% if (config.powered_by) { %>
     <p>
       <ul>
-        <li>Powered by:<li>
+        Powered by:&nbsp;&nbsp;
         <% for (var i in config.powered_by) { %>
           <li><a href="<%- config.powered_by[i] %>" target="_blank"><%= i %></a></li>
         <% } %>

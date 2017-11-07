@@ -5,13 +5,18 @@ tagcloud: Tag Cloud
 tweets: Tweets
 prev: Prev
 next: Next
-prev_post: Next
-next_post: Prev
+prev_post: "Previous Post"
+next_post: "Next Post"
 comment: Comments
-duoshuo: Duoshuo
+archives: Archives
 archive_a: Archives
 archive_b: "Archives: %s"
 page: Page %d
 recent_posts: Recent Posts
 google: Google
 baidu: Baidu
+home: Home
+feed: " "
+about: About
+read_more: "Read More"
+github: " "
