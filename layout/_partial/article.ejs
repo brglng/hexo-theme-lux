@@ -55,15 +55,17 @@
   </div>
 </article>
 
-<nav id="pagination" >
-  <% if (page.next) { %>
-    <a href="<%- config.root %><%- page.next.path %>" class="alignleft prev" ><%= __('prev_post') %>: <%= page.next.title %></a>
-  <% } %>
-  <% if (page.prev) { %>
-    <a href="<%- config.root %><%- page.prev.path %>" class="alignright next" ><%= __('next_post') %>: <%= page.prev.title %></a>
-  <% } %>
-  <div class="clearfix"></div>
-</nav>
+<% if (!index) { %>
+  <nav id="pagination" >
+    <% if (page.next) { %>
+      <a href="<%- config.root %><%- page.next.path %>" class="alignleft prev" ><%= __('prev_post') %>: <%= page.next.title %></a>
+    <% } %>
+    <% if (page.prev) { %>
+      <a href="<%- config.root %><%- page.prev.path %>" class="alignright next" ><%= __('next_post') %>: <%= page.prev.title %></a>
+    <% } %>
+    <div class="clearfix"></div>
+  </nav>
+<% } %>
 
 <% if (item.comments && config.disqus_shortname){ %>
   <%- partial('comment') %>
