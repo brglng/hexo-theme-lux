@@ -21,6 +21,7 @@ addthis:
 
 baidu_share:
   enable: true
+  js_url: /static/api/js/share.js
 
 fancybox: true
 
