@@ -46,16 +46,15 @@
         <% } else { %>
           <%- partial('post/share') %>
         <% } %>
-        <% if (index) { %>
-          <div class="post-divider"></div>
-        <% } %>
         <div class="clearfix"></div>
     <% } %>
     </footer>
   </div>
 </article>
 
-<% if (!index) { %>
+<% if (index) { %>
+  <div class="post-divider"></div>
+<% } else { %>
   <nav id="pagination" >
     <% if (page.next) { %>
       <a href="<%- config.root %><%- page.next.path %>" class="alignleft prev" ><%= __('prev_post') %>: <%= page.next.title %></a>
