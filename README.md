@@ -30,20 +30,10 @@ menu:
   Home: /
   Archives: /archives
 
-twitter:
-  username:
-  show_replies: false
-  tweet_count: 5
-
-addthis:
-  enable: false
-  pubid:
-  facebook: true
-  twitter: true
-  google: true
-  pinterest: true
-
 baidu_share:
+  enable: true
+
+gitalk:
   enable: true
 
 fancybox: true
@@ -54,20 +44,11 @@ rss:
 - **menu** - Main navigation menu
 - **widget** - Widgets displaying in sidebar
 - **excerpt_link** - "Read More" link text at the bottom of excerpted articles
-- **twitter** - Twitter widget config
-  - **username** - Twitter username
-  - **show_replies** - Enable displaying replies
-  - **tweet_count** - Tweets display in widget
-- **addthis** - Share buttons at the bottom of articles (Powered by [AddThis])
-  - **enable** - Enable share buttons
-  - **pubid** - Profile ID of [AddThis]
-  - **facebook** - Enable Facebook button
-  - **twitter** - Enable Twitter button
-  - **google** - Enable Google+ button
-  - **pinterest** - Enable Pinterest button
 - **baidu_share** - Share buttons at the bottom of articles
   (Powered by Baidu Share)
   - **enable** - Enable share buttons
+- **gitalk** - Comment system powered by Gitalk
+  - **enable** - Enable Gitalk comments
 - **fancybox** - Enable [Fancybox]
 - **google_analytics** - Google Analytics ID
 - **baidu_analytics** - Baidu Analytics ID
@@ -80,6 +61,24 @@ In *theme's* `_config.yml`:
 ```yaml
 baidu_share:
   enable: true
+```
+
+### Gitalk Support
+In *themes's* `_config.yml`:
+```yaml
+gitalk:
+  enable: true
+```
+
+In *site's* `_config.yml`:
+```yaml
+gitalk:
+  client_id: <client ID>
+  client_secret: <client secret>
+  repo: <repo>
+  owner: <owner>
+  admin: <admin>
+  distraction_free_mode: false
 ```
 
 ### Googla Analytics and Baidu Statistics Support
@@ -133,10 +132,6 @@ title: Link Post
 link: http://www.google.com/
 ---
 ```
-
-### Tweet Widget
-
-![](http://i.minus.com/iMC8EyF9y0Y3y.PNG)
 
 ### Fancybox
 
