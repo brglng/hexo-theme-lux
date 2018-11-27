@@ -6,18 +6,8 @@ menu:
   feed: /atom.xml
   github: https://github.com/brglng/
 
-twitter:
-  username:
-  show_replies: false
-  tweet_count: 5
-
-addthis:
-  enable: false
-  pubid:
-  facebook: true
-  twitter: true
-  google: true
-  pinterest: true
+gitalk:
+  enable: true
 
 baidu_share:
   enable: true

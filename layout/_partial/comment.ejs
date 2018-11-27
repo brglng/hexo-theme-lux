@@ -1,13 +1,15 @@
-<% if (page.comments){ %>
-<section id="comment">
-  <% if (theme.comment_provider == "facebook") {
-      if (theme.facebook) { %>
-      <%- partial('_partial/facebook_comment', {fbConfig: theme.facebook}) %>
-      <% } %>
-  <% } else if(config.disqus_shortname) { %>
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-  <% } %>
-</section>
+<% if (page.comments) { %>
+<div id="gitalk-container"></div>
+<script>
+var gitalk = new Gitalk({
+  clientID: '<%- config.gitalk.client_id %>',
+  clientSecret: '<%- config.gitalk.client_secret %>',
+  repo: '<%- config.gitalk.repo %>',
+  owner: '<%- config.gitalk.owner %>',
+  admin: ['<%- config.gitalk.admin %>'],
+  id: '<%- page.path %>',
+  distractionFreeMode: <%- config.gitalk.distraction_free_mode %>
+});
+gitalk.render('gitalk-container');
+</script>
 <% } %>

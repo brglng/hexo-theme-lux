@@ -13,8 +13,8 @@
         <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
         <%- partial('post/category') %>
         <%- partial('post/tag') %>
-        <% if (item.comments && config.disqus_shortname){ %>
-          <div class="comment-link"><a href="<%- item.permalink %>#disqus_thread"><%= __('comment') %></a></div>
+        <% if (item.comments && theme.gitalk.enable) { %>
+          <div class="comment-link"><a href="<%- item.permalink %>#gitalk-container"><%= __('comment') %></a></div>
         <% } %>
       </header>
     <% } %>
@@ -66,6 +66,6 @@
   </nav>
 <% } %>
 
-<% if (item.comments && config.disqus_shortname){ %>
+<% if (item.comments && theme.gitalk.enable) { %>
   <%- partial('comment') %>
 <% } %>
