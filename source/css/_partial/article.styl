@@ -128,6 +128,9 @@ article
 
       a
         color color-meta
+        &:hover
+          color color-link-hover
+          border-bottom-color color-link-border-hover
 
     .categories, .tags, .comment-link
       color color-meta
@@ -143,6 +146,9 @@ article
 
       a
         color color-meta
+        &:hover
+          color color-link-hover
+          border-bottom-color color-link-border-hover
 
     .categories
       &:before
@@ -171,8 +177,8 @@ article
       a
         color color-font
         &:hover
-          color color-link
-          text-decoration none
+          color color-link-hover
+          border-bottom none
 
   .entry
     text-align left
@@ -181,7 +187,11 @@ article
       margin-top 15px
 
     a
-      text-decoration underline
+      border-bottom 1px solid color-link-border
+      border-bottom-color color-link-border
+      &:hover
+        color color-link-hover
+        border-bottom-color color-link-border-hover
 
     table
       border-collapse collapse
@@ -333,8 +343,9 @@ article
     a
       color color-meta
       &:hover
-        color color-link
+        color color-link-hover
         text-decoration none
+        border-bottom none
       &:before
         font 1.1em font-icon
         padding-right 10px
@@ -382,3 +393,8 @@ article
       position relative
       left 50%
       margin-left -160px
+
+#pagination
+  a
+    &:hover
+      border-bottom none
