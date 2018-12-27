@@ -12,6 +12,7 @@ archives: 归档
 archive_a: 归档
 archive_b: 归档：%s
 page: 第 %d 页
+page_total: （共 %d 页）
 recent_posts: 最新文章
 google: 谷歌
 baidu: 百度
