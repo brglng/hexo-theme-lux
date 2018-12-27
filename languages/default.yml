@@ -12,7 +12,7 @@ archives: Archives
 archive_a: Archives
 archive_b: "Archives: %s"
 page: Page %d
-page_total: "&nbsp(Total %d)"
+page_total: "&nbsp;(Total %d)"
 recent_posts: Recent Posts
 google: Google
 baidu: Baidu
